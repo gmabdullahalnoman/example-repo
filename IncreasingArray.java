@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class IncreasingArray {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter array size : ");
+        //System.out.println("Enter array size : ");
         int n = sc.nextInt();
         long[] array = new long[n];
         
@@ -17,10 +17,10 @@ public class IncreasingArray {
         }
         long totalMoves =0;
         
-        for (int j=1;j<n;j++){
-            if (array[j] < array[j-1]){
-                totalMoves += (array[j-1]- array[j]);
-                array[j] = array[j-1];
+        for (int i =1;i<n;i++){
+            if (array[i] < array[i-1]){
+                totalMoves += (array[i-1]- array[i]);
+                array[i] = array[i-1];
             }
         }
         System.out.println(totalMoves);
