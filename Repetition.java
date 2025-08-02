@@ -1,8 +1,13 @@
 import java.util.Scanner;
 public class Repetition {
-    public static void Main(String args[]){
+    public static void main(String args[]){
         Scanner input = new Scanner(System.in);
         String dna = input.nextLine();
+
+        if(dna.length() == 0 ){
+            System.out.println(0);
+            return;
+        }
         int maxCount = 1;
         int currentCount = 1;
         
