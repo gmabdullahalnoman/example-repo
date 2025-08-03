@@ -1,0 +1,94 @@
+
+🧠 1. What is OOP in Java?
+Object-Oriented Programming is a way of structuring programs by modeling them as objects — real-world entities that have:
+
+State → defined by variables (fields)
+
+Behavior → defined by methods (functions)
+
+Java is a fully OOP language, except for primitive types (int, char, etc.).
+
+⚙️ 2. 4 Pillars of OOP
+
+Encapsulation	-Bundling data + methods inside a class, and controlling access
+Abstraction	-Hiding internal implementation details, showing only essential parts
+Inheritance	-A class can inherit fields and methods from another class
+Polymorphism	-One interface → many implementations (method overriding, overloading)
+
+🧱 3. Core Concepts with Code Examples
+✅ 1. Class and Object
+
+public class Car {
+    String brand;
+    int year;
+
+    void start() {
+        System.out.println(brand + " is starting...");
+    }
+}
+
+// In main method:
+Car myCar = new Car();
+myCar.brand = "Toyota";
+myCar.year = 2020;
+myCar.start();
+
+
+✅ 2. Encapsulation
+
+public class BankAccount {
+    private double balance;
+
+    public void deposit(double amount) {
+        if (amount > 0) balance += amount;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+}
+Here, balance is hidden (private). We control access through getter/setter methods.
+
+
+✅ 3. Inheritance
+
+class Animal {
+    void sound() {
+        System.out.println("Some sound");
+    }
+}
+
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Woof");
+    }
+}
+Dog inherits from Animal, and overrides the sound() method.
+
+
+✅ 4. Polymorphism
+
+Animal pet = new Dog(); // Dog is treated as Animal
+pet.sound(); // Output: Woof
+The same method name (sound) behaves differently based on the object type → polymorphism.
+
+
+✅ 5. Abstraction with Interface
+
+interface Shape {
+    double area();
+}
+
+class Circle implements Shape {
+    double radius;
+
+    Circle(double r) {
+        radius = r;
+    }
+
+    public double area() {
+        return Math.PI * radius * radius;
+    }
+}
+Here, Shape is an interface. Circle implements it and defines its own area().
+
